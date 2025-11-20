@@ -36,7 +36,7 @@ Choosing a good restaurant—especially while traveling or for special events—
     # Install dependencies
         ./Requirements_setup.sh
 
-    # Data upload (Dataset from a trusted source an/or self-created dataset)
+    # Data upload (Download dataset from a trusted source (or use the link provided in folder "Training data") and/or use self-created dataset)
         pip install jupyter
         jupyter notebook "./Data Upload/data_upload.ipynb"
     
