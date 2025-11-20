@@ -1,8 +1,8 @@
 # TasteNet — Restaurant Ranker
-A deep learning and NLP-powered framework that ranks restaurants intelligently by combining numeric ratings and sentiment-analyzed text reviews. Instead of relying solely on rating averages, TasteNet predicts sentiment-based ratings, handles linguistic nuances, and computes a confidence-based ranking score for fair and reliable comparisons.
+    A deep learning and NLP-powered framework that ranks restaurants intelligently by combining numeric ratings and sentiment-analyzed text reviews. Instead of relying solely on rating averages, TasteNet predicts sentiment-based ratings, handles linguistic nuances, and computes a confidence-based ranking score for fair and reliable comparisons.
 
 # Project Motivation
-Choosing a good restaurant—especially while traveling or for special events—can be frustrating when ratings alone are misleading. Reviews may be emotional, sarcastic, biased, or inconsistent. TasteNet solves this by interpreting subjective reviews accurately and converting them into meaningful ranking signals.
+    Choosing a good restaurant—especially while traveling or for special events—can be frustrating when ratings alone are misleading. Reviews may be emotional, sarcastic, biased, or inconsistent. TasteNet solves this by interpreting subjective reviews accurately and converting them into meaningful ranking signals.
 
 # Key Features
     1-Semantic preprocessing to reduce sarcasm, slang, and ambiguous language
@@ -56,7 +56,7 @@ Choosing a good restaurant—especially while traveling or for special events—
     4-Deployment as a live recommendation app
 
 # Acknowledgements
-Inspired by personal experiences of struggling to find trustworthy dining recommendations—especially while travelling. This project aims to make restaurant choice simple, reliable, and data-driven.
+    Inspired by personal experiences of struggling to find trustworthy dining recommendations—especially while travelling. This project aims to make restaurant choice simple, reliable, and data-driven.
 
 # Contributions
     Contributions, issues, and feature requests are welcome!
