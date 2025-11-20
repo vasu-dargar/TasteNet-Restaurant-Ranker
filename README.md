@@ -34,20 +34,20 @@ Choosing a good restaurant—especially while traveling or for special events—
 
 # How to Run    
     # Install dependencies
-    ./Requirements_setup
+        ./Requirements_setup.sh
 
     # Data upload (Dataset from a trusted source an/or self-created dataset)
-    pip install jupyter
-    jupyter notebook data_upload.ipynb
+        pip install jupyter
+        jupyter notebook "./Data Upload/data_upload.ipynb"
     
-    # Training model script -> script.py
+    # Training model script -> "./Model generation and evaluation/script.py"
 
     # Execute model for -
       
-      Semantic transform of reviews -> Sentiment scoring of transformed reviews -> Generate restaurant rankings
-      
-    jupyter notebook app.ipynb
-
+        Semantic transform of reviews -> Sentiment scoring of transformed reviews -> Generate restaurant rankings
+          
+        jupyter notebook "./Model generation and evaluation/app.ipynb"
+        
 # Future Scope
 
     1-Multi-lingual review support
