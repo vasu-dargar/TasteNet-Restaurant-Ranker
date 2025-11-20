@@ -13,6 +13,7 @@ Choosing a good restaurant—especially while traveling or for special events—
       a) Average rating
       b) Standard deviation (rating spread)
       c) Number of reviews
+    6-A generalized summary is provided for each restaurant based on semantic analysis of each restaurant's reviews.
     
     Produces more consistent and trustworthy restaurant rankings compared to raw averages.
 
