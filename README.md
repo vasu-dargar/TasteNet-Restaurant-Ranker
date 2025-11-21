@@ -4,6 +4,56 @@ A deep learning and NLP-powered framework that ranks restaurants intelligently b
 # Project Motivation
 Choosing a good restaurant—especially while traveling or for special events—can be frustrating when ratings alone are misleading. Reviews may be emotional, sarcastic, biased, or inconsistent. TasteNet solves this by interpreting subjective reviews accurately and converting them into meaningful ranking signals.
 
+# Thought process behind the scenes
+    Example -
+    
+    "The restaurant had a good ambience but the food was a disaster"
+
+        1 - Semantic transformation gives couple of transformations and the best one might just be -
+            "The restaurant had a good ambience but the food was terrible"
+
+        2 - Sentiment analysis classifies his transformed review on a scale of 5
+
+            Now, I am using Bi-GRU because -
+                Example: "The restaurant had a good ambience but the food was terrible"
+
+                Forward only may focus on “good”
+                Backward adds context from “terrible”
+                Combined understanding improves final sentiment decision
+
+            Use of attention because -
+                Not every word contributes to sentiment. Attention assigns higher weights to emotionally relevant words.
+
+                Attention might weight:
+                Word	             Importance
+                good				    0.6
+                terrible			    0.9
+                the, had, a, was		~0
+
+            Both in combination handles long-range dependencies better
+
+            GRU already solves some vanishing gradient issues, but attention ensures:
+            It does not forget important earlier words
+            It maintains performance even with long sentences
+
+        Training data will have reviews which will have text review and/or numeric ratings
+
+        3 - In case numeric ratings are absent, for example- opinions of people on social media like reddit, etc., these numeric ratings are predicted from sentiment scoring explained above.
+            For reviews where numeric ratings are present, they are taken as it is
+
+        Now, all numeric ratings corresponding to each restaurant is taken
+
+        4 - Why confidence score depicts more reliable rankings ?
+            Example:
+            Restaurant	    Avg Rating	    Review Count	Rating Based On Spread	    Final Ranking
+            A	            4.2	            180	            	0.82  (Narrow)	            High
+            B	            4.2	            32	            	0.54  (Wide)	            Lower
+            
+            A high spread means users have polarising experiences (good + terrible).
+            A narrow spread means predictable quality.
+            
+            Consumers typically prefer consistency, so the ranking should reflect stability, not only the arithmetic mean.
+
 # Key Features
     1-Semantic preprocessing to reduce sarcasm, slang, and ambiguous language
     2-Attention-based BiGRU sentiment model trained on reviews with numeric ratings
